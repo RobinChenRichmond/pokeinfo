@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="jquery.js"></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guanyu's World</title>
+  <link rel="stylesheet" href="/assets/site.css?t=1450775550">
+  <link rel="stylesheet" href="/assets/font.css?t=1437645997">
+  
+<style>
+button {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     border-bottom:1px solid #444; 
+     cursor: pointer;
+}
+</style>
+
+<script>
+function purePlay(){
+	if($('#introduction:contains("休闲玩家")').length > 0){
+		$("#introduction").empty();
+	} else{
+		$('#introduction').append("休闲玩家可以关掉网站了（微笑脸<br>好吧");
+		
+	}
+}
+
+function pokeDex(){	
+	if($('#eventTable tr > td:contains("抓")').length > 0){
+		$("#eventTable tr").remove();
+		$('#pokeDex').html("我想尽量收集更多的图鉴。");
+	}else{	
+		if($('#eventTable tr > td:contains("对战")').length > 0){
+			$("#eventTable tr").remove();
+			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和站领道馆。");
+		}
+
+		$('#eventTable > tbody').append("<tr><td>1.如何更容易地抓到一只精灵？</td></tr><tr><td>2.获得精灵：抓获/进化/孵蛋/地区特有精灵</td></tr><tr><td>3.等级对获得图鉴（抓获精灵）的利弊</td></tr><tr><td>4.孵蛋列表一览：你想要哪种精灵蛋？</td></tr><tr><td>5.伊布进化彩蛋 Eeveelutions</td></tr>");
+		$('#pokeDex').html("隐藏2级菜单");
+	}
+}
+
+function takeGym(){	
+	if($('#eventTable tr > td:contains("对战")').length > 0){
+		$("#eventTable tr").remove();
+		$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和站领道馆。");
+	}else{	
+		if($('#eventTable tr > td:contains("抓")').length > 0){
+			$("#eventTable tr").remove();
+			$('#pokeDex').html("我想尽量收集更多的图鉴。");
+		}
+
+		$('#eventTable > tbody').append("<tr><td>1.一只Pokemon的真实战斗力由哪些组成？</td></tr><tr><td>2.等级对培养Pokemon有多大的影响？</td></tr><tr><td>3.在实际对战中有哪些技巧？</td></tr><tr><td>4.孵蛋列表一览：你想要哪种精灵蛋？</td></tr><tr><td>5.伊布进化彩蛋 Eeveelutions</td></tr>");
+		$('#takeGym').html("隐藏2级菜单");
+	}
+}
+
+</script>
+
+</head>
+  
+<body>
+
+<div class="entry-header">
+  <div class="container">
+    <h1 class="entry-title" itemprop="name">Pokemon Go 指南</h1>
+  </div>
+</div>
+
+<article id="main" role="main" class="hentry yue" itemscope itemtype="http://schema.org/Article">
+<div class="entry-content container" itemprop="articleBody">
+<h2>我想要怎样去玩Pokemon GO?</h2>
+
+<table id = "questions" style="width:100%">
+  <tr>
+    <td><button input id="purePlay" type="button" onclick="purePlay()">我是纯休闲玩家，没太多想法。</button></td>
+  </tr>
+  <tr>
+    <td><button input id="pokeDex" type="button" onclick="pokeDex()">我想尽量收集更多的图鉴。</button></td>
+  </tr>
+  <tr>
+    <td><button input id="takeGym" type="button" onclick="takeGym()">我想要<span style="text-decoration:line-through;">称霸里士满</span>培养强力的精灵和站领道馆。</button></td>
+  </tr>
+  <tr>
+    <td><button input id="useItems" type="button" onclick="useItems()">我想了解如何合适地使用道具。</button></td>
+  </tr>
+</table>
+
+<div id = "introduction">
+</div>
+
+<table id = "eventTable" style="width:80%">
+<tbody>
+</tbody>
+</table>
+
+</div>
+
+</article>
+</body>
+</html>
