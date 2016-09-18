@@ -23,63 +23,63 @@ button {
 <script>
 function purePlay(){
 	$('#introTwo').empty();
-	if($('#introduction:contains("休闲玩家")').length > 0){
+	if($('#introduction:contains("have fun")').length > 0){
 		$("#introduction").empty();
-		$('#purePlay').html("我是纯休闲玩家，没太多想法。");
+		$('#purePlay').html("I just want to have fun.");
 	} else{
-		 if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
-			$('#pokeDex').html("我想尽量收集更多的图鉴。");	
-		} else if($('#eventTable tr > td:contains("对战")').length > 0){
-			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
-		} else if($('#eventTable tr > td:contains("熏香")').length > 0){
-			$('#useItems').html("我想了解如何合适地使用道具。");
+		 if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
+			$('#pokeDex').html("I want to collect pokedexes and catch them all!");	
+		} else if($('#eventTable tr > td:contains("gyms")').length > 0){
+			$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
+		} else if($('#eventTable tr > td:contains("incense")').length > 0){
+			$('#useItems').html("I want to learn how to use items in their best ways.");
 		}
 		
 		$("#eventTable tr").remove();
 		$("#introduction").empty();
 		
-		$('#introduction').append("<h3>休闲玩家</h3>休闲玩家可以关掉网页了（微笑脸<br>好吧需要注意的一点是这款游戏非常耗电，所以在想长时间玩的时候可以考虑携带充电宝或者开启节电模式。<br><h3>节电模式</h3>在setting中打开battery saver mode，之后在倒置手机时可将手机黑屏，同时在遇到pokemon时会用声音/震动来提醒。");
-		$('#purePlay').html("隐藏内容");
+		$('#introduction').append("<h3>Play for fun</h3>Just a reminder: This game is a BATTERY KILLER, so be sure to have a battery bank and set the game in battery saver mode while playing.<br><h3>Battery Saver Mode</h3>Open the battery saver mode in setting, then put your cellphone upside down to open the screen saver and save some battery while you are not catching pokemons or taking gyms. It will notify you with vibration if you encountered a pokemon.");
+		$('#purePlay').html("Close the menu.");
 		
 	}
 }
 
 function pokeDex(){	
 	$('#introTwo').empty();	
-	if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
+	if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#pokeDex').html("我想尽量收集更多的图鉴。");
+		$('#pokeDex').html("I want to collect pokedexes and catch them all!");
 	}else{	
-		if($('#eventTable tr > td:contains("对战")').length > 0){
-			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
-		} else if($('#introduction:contains("休闲玩家")').length > 0){
-			$('#purePlay').html("我是纯休闲玩家，没太多想法。");
-		} else if($('#eventTable tr > td:contains("熏香")').length > 0){
-			$('#useItems').html("我想了解如何合适地使用道具。");
+		if($('#eventTable tr > td:contains("gyms")').length > 0){
+			$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
+		} else if($('#introduction:contains("have fun")').length > 0){
+			$('#purePlay').html("I just want to have fun.");
+		} else if($('#eventTable tr > td:contains("incense")').length > 0){
+			$('#useItems').html("I want to learn how to use items in their best ways.");
 		}
 		
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
 		
-		$('#introduction').append("<h3>收集图鉴</h3>如对节电模式有不了解请至休闲玩家板块<br>Pokmon Go目前包括1代的151种pokemon,但由于目前并没有任何方法抓到超梦，萌幻，3神鸟及百变怪这6只pokemon，对于玩家来说只有145个可能集齐的图鉴。");
+		$('#introduction').append("<h3>Collecting Pokedexes</h3>If you don't know what is battery saver mode, move to the first menu.<br>Pokmon Go now contains all 151 kinds of pokemons in its first generation. However, since Mew, Mewtoo, Ditto and the three Legendary Birds are currently unavailable, for players there're only 145 collectable pokedexes.");
 
-		$('#eventTable > tbody').append("<tr><td><button input id='pda' type='button' onclick='pda()'>1.如何更容易地抓到一只pokemon？</button></td></tr><tr><td><button input id='pdb' type='button' onclick='pdb()'>2.获得pokemon：抓获/进化/孵蛋/地区特有精灵</button></td></tr><tr><td><button input id='pdc' type='button' onclick='pdc()'>3.等级对获得图鉴（抓获精灵）的利弊</button></td></tr><tr><td><button input id='pdd' type='button' onclick='pdd()'>4.孵蛋列表一览：你想要哪种精灵蛋？</button></td></tr><tr><td><button input id='pde' type='button' onclick='pde()'>5.伊布进化彩蛋 Eeveelutions</button></td></tr>");
+		$('#eventTable > tbody').append("<tr><td><button input id='pda' type='button' onclick='pda()'>1.How to catch a pokemon more easily？</button></td></tr><tr><td><button input id='pdb' type='button' onclick='pdb()'>2.Get a pokemon：Catch/Evolve/Hatch/Region Exclusive</button></td></tr><tr><td><button input id='pdc' type='button' onclick='pdc()'>3.How level matters in catching a pokemon</button></td></tr><tr><td><button input id='pdd' type='button' onclick='pdd()'>4.Hatching list: Which kind of egg do you want?</button></td></tr><tr><td><button input id='pde' type='button' onclick='pde()'>5.Eevee easter egg: Eeveelutions</button></td></tr>");
 		
-		$('#pokeDex').html("隐藏2级菜单");
+		$('#pokeDex').html("Close the menu.");
 	}
 }
 	
 function pda(){
-	$('#introTwo').html("<h3>影响因素</h3>每只pokemon都有着自己的抓获率和逃跑率，而这个基础会受到pokemon等级和 玩家等级（待考证） 的影响。除此之外，树莓的使用，不同种类的精灵球，扔中精灵时圆圈的大小，是否扔出Nice/Great/Excellent也都是可能的影响因素。目前普遍认为Curve ball对成功率无影响<h3>核心因素：圆圈</h3>经考证，在圆圈越小的时候扔中pokemon将获得越高的抓获率，经不权威玩家统计圆圈最小时的抓获率接近最大时的2倍。同时，玩家经统计发现Nice/Great/Excellent对抓获率几乎没有，或只有0%-5%的帮助。树莓无疑会提高抓获率，但具体值有待考证，有观点表示为50%。高级的精灵球对抓获率均有不同程度的帮助，已有人得出过较权威的结论，但本人并不知道。因此，在遇到图鉴缺少的，或极想抓到的pokemon时，玩家能做的就是使用树莓和最好的精灵球，尽量保持圆圈较小的前提小选择性地追求excellent。如果你扔出了Great，首先说明扔中pokemon时圆圈还不算太小。pokemon中值得一提的是凯西，逃跑率为99%，因此如果想抓到要保证一发入魂，否则几乎没有机会。");
+	$('#introTwo').html("<h3>What matters?</h3>Every pokemon has its unique catch rate and flee rate, and this will be influenced by the level of pokemon and the the level of trainer (needs proof). Besides, berries, different kinds of balls, radius of the circle while hit the pokemon, and if you get a Nice/Great/Excellent are all possible factors. For now, most players believe that curve ball doesn't matter the catch rate.<h3>Most Important：Radius of Circle</h3>Proved, when you hit the pokemon with a pokeball, the smaller the radius of circle, the higher the catch rate would be. Proved by unauthority, the highest catch rate could be almost as twice as the lowest catch rate. Nevertheless, Nice/Great/Excellent actually does not affect the catch rate, or just make a 0%-5% difference. Berries surely increases the catch rate, and someone says it's a 50% improvement. Better pokeballs have different kinds of improvement towards catch rate, and details could be found online. Thus, if you want more pokedexes or just eagerly want a certain pokemon, just use both berries and the best pokeballs, and keep the circle as small as possible, and finally try throwing an Excellent, which is the least important. There's an interesting case in pokemon, which is Abra, with 99% flee rate. Undoubtedly if you want catch an Abra, you almost have to make it with your first ball.");
 }	
 
 function pdb(){
-	$('#introTwo').html("<h3>获得pokemon的众多途径</h3>抓获是最基本的方法，而其中大家都知道地形对于pokemon的生成会有着不小的影响。而人口密集度又能影响pokemon的数量，因此到人多的大城市（好吧说的就是纽约）会有着很多天然的优势。<br>显然创造邂逅并不是收集图鉴的唯一方法，除此之外还有一些更加稳定，靠谱的获得pokemon的方法。<h3>孵蛋</h3>蛋分为3种，2km, 5km, 10km, 各能孵出互相不重合的一部分pokemon，而这3种蛋其实已经囊括了1代所有（可得的）精灵的本体或进化前个体。换句话说，刨除地区特有的不确定因素（后续会提到），靠孵出无数的蛋完全可以集齐所有的图鉴。而且孵蛋也会因不同公里数提供随机的不同数量stardust及糖果，对于后续的进化也有不小的帮助。<br>当然孵蛋的弊端也很明显，就是需要付出时间和体力，这也解释了为什么不管玩家是否氪金，孵蛋器都是性价比最高的道具。<h3>进化</h3>这点无需多言，因为进化过的pokemon本身出现几率就很低，所以对于大部分进化后的pokemon的图鉴来说，收集进化前的糖果然后进化是最好或唯一的途径。这里也体现了孵蛋可以给大量糖果的优势。<h3>地区特有精灵</h3>有4种精灵只有在特定的大洲才会出现：<br>肯泰罗：美洲 魔偶：欧洲 大葱鸭：亚洲 袋龙：澳洲<br>虽然有传言说孵蛋可以无视地理位置孵出这些特定pokemon，目前来看基本属于谣言，或者就是孵出特定pokemon的可能性极地。一般大家还是认为虽然孵蛋可能孵出地区特定，但也只是能孵出自己所在的大洲的pokemon。");
+	$('#introTwo').html("<h3>Many ways to get a pokemon</h3>Catching is the most basic way, and everyone knows that regions matter the kinds of pokemons in a way. What's more, more prosperous and crowded cities (like the hateful NYC) has higher spawn rate for pokemons, which provides extremely high initial superiority to players there.<br>But trying encountering every pokemon is obviously not the only way to catch them all, and there're many better ways.<h3>Hatching</h3>There're 3 kinds of eggs, 2km, 5km, 10km, and each kind of eggs can hatch some exclusive pokemons. The union set of available pokemons for all these 3 kinds of eggs is just all available pokemons (before evolving). In another word, except the region exclusives (talked later), you can get all pokemons just by keep hatching eggs! And since hatching provides lots of candies and stardust based on different kinds of eggs, it also helps a lot to potential evolving you may need.<br>And here's the obvious disadvantage: You have to pay time and your legs, and this explains why Incubators is the best item to buy.<h3>Evolving</h3>Unnecessary for too much explanation, collecting candies and evolving is the best way to get pokedex of evolved pokemon since their spawn rate is quite low (Candies also explains advantage of Incubators).<h3>Region Exclusive</h3>There're 4 kinds of pokemons which only spawn in specific continents<br>Tauros：North America Mr. Mime：Europe Farfetch'd：Asia Kangaskhan：Australasia <br>Though there's rumour saying you can hatch region exclusives no matter where you are, but it seems you can only hatch them with quite low probability, and in the right region.");
 }
 
 function pdc(){
-	$('#introTwo').html("<h3>等级对于图鉴党的利弊</h3>对于只为收集图鉴的玩家来说，等级是一个并不很重要的设定。但其实它也会有或多或少的影响。这里请玩家自己权衡。<h3>优势</h3>虽然高等级毫无意义，但鉴于20级才可以解锁ultra ball，而这又是能大幅提升抓获率的精灵球，玩家为了解锁各种道具（树莓，great ball，ultra ball）还是会想尽量升到20级以上。而20级后确实就没有对抓获精灵有帮助的新道具了。另外，一个本人也不敢确定的说法，训练师等级会对抓获成功率有正收益影响，这个请自己查证。<h3>劣势</h3>很明显的一个劣势，玩家在升级之后遇到高等级精灵的可能性也大幅上升，而高等级精灵大大提高了抓获难度。所以很多玩家级高了之后见到10CP的波波都要高兴一下，因为300+CP的波波经常会吃掉五六个pokeball然后一溜烟跑了。。而抓到又没什么意义。总之，甚至有少数图鉴党保持尽量缓慢升级，这些人应该确实是完全对打道馆没想法吧，还是不太提倡的。。");
+	$('#introTwo').html("<h3>How level matters to people who just want pokedexes</h3>For pokedex collecters, level does not matter much. but it do influences several things, and you could balance the advantages and disadvantages by yourselves.<h3>Advantages</h3>Though high level is useless, since only after level 20 players could use the best pokeball, ultra ball, which increases the catch rate a lot, players are recommended to reach level 20 even just for unlocking these items（berries，great balls，ultra balls. And after level 20 there's no items which could help catch pokemon more easily. And another unproved opinion is that trainers with higher level would catch pokemons slightly more easily.<h3>Disadvantages</h3>Here's a quite explicit disadvantage: Players are probably to encounter a unknown pokemon with also higher leve, which make the catch rate much lower. That's why many players are so happy to see a CP10 Pidgey. There're even some players that try to level up slower, but I don't recommended that since that's a too narrow and radical way to go.");
 }
 
 function pdd(){
@@ -87,32 +87,32 @@ function pdd(){
 }
 
 function pde(){
-	$('#introTwo').html("伊布作为平民的希望在道馆战中一直十分强势，不过即使是为了集齐图鉴也最好对伊布的彩蛋有所了解。虽然有说法表示这个彩蛋现在已经失效了，但很有可能是因为大部分玩家在使用中出现了一些错误或误解。想要确保进化出想要的伊布，务必要完全理解彩蛋的用法：<br>首先，这个彩蛋只能帮助你进化出一只水、火、雷伊布，而任何使用多次的说法，都仅仅是因为运气而已。也有玩家因为使用多次的时候失败然后表示彩蛋没有效果了，这是错误的说法。<br>步骤：首先将想进化的伊布重命名，水对应Rainer，火对应Pyro，雷对应Sparky。务必注意大小写。然后务必注意关闭游戏，重新打开。如果手机速度较慢或网络较卡而没有重启游戏确保更改了信息的话，是可能导致彩蛋失败的。最后，打开游戏进化伊布，然后记得，如果已经进化了Rainer，以后就不能用此法再进化出水伊布了，但可以进化其他两种，火雷也是同理。");
+	$('#introTwo').html("Eevee is a fierce beast in gym battle, also a normal pokemon that everyone can easily get one. No matter if you have all eevee's pokedexes, you'd better know this easter egg. The important thing is: Be sure to strictly follw the steps.<br>First a clarification, the easter egg can only help you get one Vaporeon, one Flareon and one Joleon, and any rumour that says it works many times is just because of some lucky guys. Someone may succeeded twice, and failed the 3rd time, and claim that the easter egg doesn't work anymore-- This is wrong.<br>Steps：First, rename the eevee you want to evolve. Rainer for Vaporeon, Pyro for Flareon, Sparky for Jolteon。Remember the capital letter. Then close the game and reopen it. Finally evolve the right eevee, and remember, if you evolve Rainer and get a Vaporeon, it means that you cannot get Vaporeon with this easter egg anymore, but you can get Flareon and Jolteon.");
 }
 
 function takeGym(){
 	$('#introTwo').empty();	
-	if($('#eventTable tr > td:contains("对战")').length > 0){
+	if($('#eventTable tr > td:contains("gyms")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
+		$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
 	}else{	
-		if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
-			$('#pokeDex').html("我想尽量收集更多的图鉴。");
-		} else if($('#introduction:contains("休闲玩家")').length > 0){
-			$('#purePlay').html("我是纯休闲玩家，没太多想法。");
-		} else if($('#eventTable tr > td:contains("熏香")').length > 0){
-			$('#useItems').html("我想了解如何合适地使用道具。");
+		if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
+			$('#pokeDex').html("I want to collect pokedexes and catch them all!");
+		} else if($('#introduction:contains("have fun")').length > 0){
+			$('#purePlay').html("I just want to have fun.");
+		} else if($('#eventTable tr > td:contains("incense")').length > 0){
+			$('#useItems').html("I want to learn how to use items in their best ways.");
 		}
 		
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
 		
-		$('#introduction').append("<h3>培养pokemon</h3>pokemon在实际对战中的表现受相当多因素的影响，完全不是CP这一项数据所能决定的。玩家虽然没必要对每个因素都斤斤计较，但选取一个各方面都在中上水平的来培养还是会在道馆战斗中有或多或少的帮助。<h3>占领道馆</h3>首先道馆的设定无限偏向于“易攻难守”，所以需要纠正很多玩家“想要拼命守住道馆”的误区，因为这样做不仅可能耗费更多药剂，带来的收益也基本为0。而在道馆战中，攻击方有着极多的技巧，巧妙运用便可以让自己轻松战胜CP为自己2倍左右的敌人。在打下几所道馆后，在shop页面领取奖励，然后就可以不再关心道馆，或准备治疗自己被打回来的pokemon了。每天只能领取一次奖励，因此一天内持续地防守道馆并不会给你任何额外的奖励。");
+		$('#introduction').append("<h3>Train Pokemons</h3>Pokemons performance in battle are influenced by many other factors besides a cold CP number. Though players do not need to be captious to all these factors, picking a pokemon with good attributes in all aspect indeed helps you some in gym battle.<h3>Take Gyms</h3>First, it's quite easy to take a gym and quite hard to hold one, so don't be to serious to hold a gym. Since it not only may waste more potions, but also benefit you almost nothing. In a gym battle, there're many skills that attackers could make use of and just defeat a defender's pokemon with twice CP of the attacker's. After you take all gyms you want to take, be sure to claim your reward in the shop page, and then just forget the gyms since you can only claim reward every 21 hours (or just 1 day), which means keep holding a gym within 1 day don't provide you any extra reward.");
 		
-		$('#eventTable > tbody').append("<tr><td><button input id='tga' type='button' onclick='tga()'>1.一只Pokemon的真实战斗力由哪些组成？</button></td></tr><tr><td><button input id='tgb' type='button' onclick='tgb()'>2.等级对培养Pokemon有多大的影响？具体要如何培养一只主力？</button></td></tr><tr><td><button input id='tgc' type='button' onclick='tgc()'>3.在实际对战中有哪些技巧？</button></td></tr><tr><td><button input id='tgd' type='button' onclick='tgd()'>4.如何训练队友的道馆？</button></td></tr>tr><td><button input id='tge' type='button' onclick='tge()'>5.在抓获野生pokemon时有什么注意事项及和图鉴收集玩家的区别？</button></td></tr><tr><td>关于很重要的一点如何快速升级，请看使用道具板块的lucky egg用法</td></tr>");
+		$('#eventTable > tbody').append("<tr><td><button input id='tga' type='button' onclick='tga()'>1.The real power of a pokemon is consist of...?</button></td></tr><tr><td><button input id='tgb' type='button' onclick='tgb()'>2.How level matters to training pokemons? How to get a main force?</button></td></tr><tr><td><button input id='tgc' type='button' onclick='tgc()'>3.What are the skills in actual battle?</button></td></tr><tr><td><button input id='tgd' type='button' onclick='tgd()'>4.How to train gyms?</button></td></tr>tr><td><button input id='tge' type='button' onclick='tge()'>5.Difference from pokedexes collecters while catching pokemons.</button></td></tr><tr><td>Level is quite important, and please see 'How to use lucky eggs' for skill of quick leveling </td></tr>");
 		
-		$('#takeGym').html("隐藏2级菜单");
+		$('#takeGym').html("Close the menu.");
 	}
 }
 
@@ -139,24 +139,24 @@ $('#introTwo').html("<h3>野生精灵的培养可能</h3>作为一个需要寻�
 
 function useItems(){	
 	$('#introTwo').empty();
-	if($('#eventTable tr > td:contains("熏香")').length > 0){
+	if($('#eventTable tr > td:contains("incense")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#useItems').html("我想了解如何合适地使用道具。");
+		$('#useItems').html("I want to learn how to use items in their best ways.");
 	}else{	
-		if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
-			$('#pokeDex').html("我想尽量收集更多的图鉴。");
-		} else if($('#introduction:contains("休闲玩家")').length > 0){
-			$('#purePlay').html("我是纯休闲玩家，没太多想法。");
-		} else if($('#eventTable tr > td:contains("对战")').length > 0){
-			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
+		if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
+			$('#pokeDex').html("I want to collect pokedexes and catch them all!");
+		} else if($('#introduction:contains("have fun")').length > 0){
+			$('#purePlay').html("I just want to have fun.");
+		} else if($('#eventTable tr > td:contains("gyms")').length > 0){
+			$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
 		}
 		
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
 
-		$('#eventTable > tbody').append("<tr><td><button input id='uia' type='button' onclick='uia()'>1.合理使用孵蛋器</button></td></tr><tr><td><button input id='uib' type='button' onclick='uib()'>2.合理使用Lucky Egg（升级利器）</button></td></tr><tr><td><button input id='uic' type='button' onclick='uic()'>3.合理使用熏香</button></td></tr><tr><td><button input id='uid' type='button' onclick='uid()'>4.简述Lure Module</button></td></tr><tr><td><button input id='uie' type='button' onclick='uie()'>5.pokemon金币规划</button></td></tr>");
-		$('#useItems').html("隐藏2级菜单");
+		$('#eventTable > tbody').append("<tr><td><button input id='uia' type='button' onclick='uia()'>1.How to use Incubators</button></td></tr><tr><td><button input id='uib' type='button' onclick='uib()'>2.How to use lucky eggs (to level up quickly!)</button></td></tr><tr><td><button input id='uic' type='button' onclick='uic()'>3.How to use incenses</button></td></tr><tr><td><button input id='uid' type='button' onclick='uid()'>4.Short discription for Lure Module</button></td></tr><tr><td><button input id='uie' type='button' onclick='uie()'>5.How to manage my pokecoins</button></td></tr>");
+		$('#useItems').html("Close the menu.");
 	}
 }
 
@@ -195,34 +195,34 @@ $('#introTwo').html("<h3>金币规划</h3>这款游戏对城市玩家相对较�
 	<strong>Guanyu's world</strong>
       </a>
       <nav id="nav">
-          <a href="/">中文版</a>
-          <a href="pokeinfoE.html">English</a>
+          <a href="pokeinfo.html">中文版</a>
+          <a href="/">English</a>
       </nav>
     </div>
   </header>
 
 <div class="entry-header">
   <div class="container">
-    <h1 class="entry-title" itemprop="name">Pokemon Go 指南</h1>
+    <h1 class="entry-title" itemprop="name">Pokemon Go Guide</h1>
   </div>
 </div>
 
 <article id="main" role="main" class="hentry yue" itemscope itemtype="http://schema.org/Article">
 <div class="entry-content container" itemprop="articleBody">
-<h2>我想要怎样去玩Pokemon GO?</h2>
+<h2>How do you want to Pokemon GO?</h2>
 
 <table id = "questions" style="width:100%">
   <tr>
-    <td><button input id="purePlay" type="button" onclick="purePlay()">我是纯休闲玩家，没太多想法。</button></td>
+    <td><button input id="purePlay" type="button" onclick="purePlay()">I just want to have fun.</button></td>
   </tr>
   <tr>
-    <td><button input id="pokeDex" type="button" onclick="pokeDex()">我想尽量收集更多的图鉴。</button></td>
+    <td><button input id="pokeDex" type="button" onclick="pokeDex()">I want to collect pokedexes and catch them all!</button></td>
   </tr>
   <tr>
-    <td><button input id="takeGym" type="button" onclick="takeGym()">我想要<span style="text-decoration:line-through;">称霸里士满</span>培养强力的精灵和占领道馆。</button></td>
+    <td><button input id="takeGym" type="button" onclick="takeGym()">I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.</button></td>
   </tr>
   <tr>
-    <td><button input id="useItems" type="button" onclick="useItems()">我想了解如何合适地使用道具。</button></td>
+    <td><button input id="useItems" type="button" onclick="useItems()">I want to learn how to use items in their best ways.</button></td>
   </tr>
 </table>
 
@@ -238,7 +238,7 @@ $('#introTwo').html("<h3>金币规划</h3>这款游戏对城市玩家相对较�
 </div>
 
 <br><br><br>
-<a href = "/">返回主页</a>
+<a href = "/">back to the homepage</a>
 
 </div>
 </article>
