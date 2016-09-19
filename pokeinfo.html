@@ -4,7 +4,7 @@
   <script type="text/javascript" src="jquery.js"></script>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guanyu's World</title>
+  <title>Guanyu's Cabin</title>
   <link rel="stylesheet" href="/assets/site.css?t=1450775550">
   <link rel="stylesheet" href="/assets/font.css?t=1437645997">
   
@@ -117,7 +117,7 @@ function takeGym(){
 }
 
 function tga(){
-$('#introTwo').html("<h3>Pokemon可提升的实力和在对战中的发挥？</h3>主要受：CP，等级，技能，完美度影响。<h3>Combat Power</h3>每个精灵都有攻击，防御，生命3个个体值。CP是最简单暴力的通过个体值衡量一个pokemon战斗力的标准，而它也很好理解：<br>CP = MAX(10, FLOOR(Stamina^0.5 * Attack * Def^0.5 / 10))<br>至于有人好奇Niantic是如何设计pokemon个体值的，经考证是使用另一个函数来将第6代的6个个体值融合为了3个。详情见<a href='https://www.reddit.com/r/TheSilphRoad/comments/4t7r4d/exact_pokemon_cp_formula/'>Reddit链接</a>。而实际上，CP高虽然能代表pokemon的个体值较强，但不能给玩家一个全面的对于pokemon的理解，所以我们还要继续看下面的内容：<h3>等级</h3>Pokemon的等级在游戏中是并不会显示的，但我们已知2点：<br>1.pokemon的等级不会超过训练师的等级<br>2.每次power up会提升pokemon 0.5级。<br>之后可以参照下面这张图表，不过官方可能关于糖果数量做过细微调整：<br><img src = 'stardust.png' name = 'pic' alt = 'star' style='width:600px;height:500px;'><br>pokemon的等级高，代表它的CP自然会相对较高，而每次power up需要的stardust和糖果也会越来越高。30级后，power up带来的CP增幅会减半，而耗费又奇高，可以理解为升级惩罚之一。<h3>技能</h3>每只pokemon都有着quick move和main move两种技能，而对于大多数pokemon来说这两种技能都是在几种可能性中随机分配的。技能的优劣，可能对pokemon在对战中的伤害有10%-20%甚至更高的影响。对于想培养一个核心主力的玩家来说，技能是非常重要的一点。因为CP完全与等级挂钩，都是可以通过power up来提升的，但技能一旦确定除非进化否则目前没有任何途径改变。至于什么算好技能什么算差技能，这个网站给出了每只pokemon直观详细的可能及最佳的技能组合：<a href = 'https://pokemon.gameinfo.io/'>网站链接点我</a><br>这个网站有很多实用的功能，其他的会在后续提到。目前点开任何pokemon，你都可以看到它拥有的quick move及main move，以及他们的<br>DPS:在计算过同系技能增强25%及暴击几率后的总伤害，除以技能需要时间。<br>但在道馆战中其实DPS也不能硬性地决定pokemon的伤害，尤其是在考虑到需要dodge对方技能的时候。所以对于数据永远不要太过计较高低。<h3>完美度</h3>这是最多玩家所不知道的一个设定，甚至是在评价系统（任何一只pokemon点开右下角按钮，transfer上面的appraisal按钮）更新之后。<br>每只精灵除了有攻击防御生命3个个体值外，每项个体值还各有0-15的浮动值。举例一只乘龙在40级时个体值为200 210 220，若它的最终值为200 210 220，我们说它的完美度为0%，若为215 225 235，我们说他的完美度为100%。简单地说，完美度就是用一个pokemon三项浮动值的和除以45。<br>完美度无疑和技能一样不可变地决定了pokemon的一些自有的素质，所以也有很多人盲目追求高的完美度。但经过考证，90%完美度与100%总战力相差仅2%左右，80%与100%近4%,50%与100%仅9%左右，因为完美度的重要性完全低于技能，属于一个可有可无的标准。或者说，只要你的pokemon完美度不是低的可怜，都不用在意。另一个直观的说法：完美度100%的main move为twister的暴鲤龙，攻击强度并不如完美度0%的带Hydro pump的暴鲤龙。另外，<a href = 'https://pokemon.gameinfo.io/'>上文提到的这个网站</a>同样提供了通过算法猜测pokemon具体浮动值的功能，而这个功能在结合了官方的appraisal系统后几乎可以准确地将浮动值锁定在2个甚至1个可能性左右。功能在网站里的“IV calculator”板块。<br>关于appraisal system，个人觉得官方做的比较实用，因为只要在最高评价（完美度80%以上）基本都不用在意完美度了。至于如何使用appraisal system可以看下表：<br><img src = 'appraisal.png' name = 'pic' alt = 'appraisal' style='width:800px;height:400px;'><h3>属性相克</h3>将在对战技巧中提到");
+$('#introTwo').html("<h3>Pokemon可提升的实力和在对战中的发挥？</h3>主要受：CP，等级，技能，完美度影响。<h3>Combat Power</h3>每个精灵都有攻击，防御，生命3个个体值。CP是最简单暴力的通过个体值衡量一个pokemon战斗力的标准，而它也很好理解：<br>CP = MAX(10, FLOOR(Stamina^0.5 * Attack * Def^0.5 / 10))<br>至于有人好奇Niantic是如何设计pokemon个体值的，经考证是使用另一个函数来将第6代的6个个体值融合为了3个。详情见<a href='https://www.reddit.com/r/TheSilphRoad/comments/4t7r4d/exact_pokemon_cp_formula/'>Reddit链接</a>。而实际上，CP高虽然能代表pokemon的个体值较强，但不能给玩家一个全面的对于pokemon的理解，所以我们还要继续看下面的内容：<h3>等级</h3>Pokemon的等级在游戏中是并不会显示的，但我们已知2点：<br>1.pokemon的等级不会超过训练师的等级+1.5<br>2.每次power up会提升pokemon 0.5级。<br>之后可以参照下面这张图表，不过官方可能关于糖果数量做过细微调整：<br><img src = 'stardust.png' name = 'pic' alt = 'star' style='width:600px;height:500px;'><br>pokemon的等级高，代表它的CP自然会相对较高，而每次power up需要的stardust和糖果也会越来越高。30级后，power up带来的CP增幅会减半，而耗费又奇高，可以理解为升级惩罚之一。<h3>技能</h3>每只pokemon都有着quick move和main move两种技能，而对于大多数pokemon来说这两种技能都是在几种可能性中随机分配的。技能的优劣，可能对pokemon在对战中的伤害有10%-20%甚至更高的影响。对于想培养一个核心主力的玩家来说，技能是非常重要的一点。因为CP完全与等级挂钩，都是可以通过power up来提升的，但技能一旦确定除非进化否则目前没有任何途径改变。至于什么算好技能什么算差技能，这个网站给出了每只pokemon直观详细的可能及最佳的技能组合：<a href = 'https://pokemon.gameinfo.io/'>网站链接点我</a><br>这个网站有很多实用的功能，其他的会在后续提到。目前点开任何pokemon，你都可以看到它拥有的quick move及main move，以及他们的<br>DPS:在计算过同系技能增强25%及暴击几率后的总伤害，除以技能需要时间。<br>但在道馆战中其实DPS也不能硬性地决定pokemon的伤害，尤其是在考虑到需要dodge对方技能的时候。所以对于数据永远不要太过计较高低。<h3>完美度</h3>这是最多玩家所不知道的一个设定，甚至是在评价系统（任何一只pokemon点开右下角按钮，transfer上面的appraisal按钮）更新之后。<br>每只精灵除了有攻击防御生命3个个体值外，每项个体值还各有0-15的浮动值。举例一只乘龙在40级时个体值为200 210 220，若它的最终值为200 210 220，我们说它的完美度为0%，若为215 225 235，我们说他的完美度为100%。简单地说，完美度就是用一个pokemon三项浮动值的和除以45。<br>完美度无疑和技能一样不可变地决定了pokemon的一些自有的素质，所以也有很多人盲目追求高的完美度。但经过考证，90%完美度与100%总战力相差仅2%左右，80%与100%近4%,50%与100%仅9%左右，因此完美度的重要性完全低于技能，属于一个可有可无的标准。或者说，只要你的pokemon完美度不是低的可怜，都不用在意。另一个直观的说法：完美度100%的main move为twister的暴鲤龙，攻击强度并不如完美度0%的带Hydro pump的暴鲤龙。另外，<a href = 'https://pokemon.gameinfo.io/'>上文提到的这个网站</a>同样提供了通过算法猜测pokemon具体浮动值的功能，而这个功能在结合了官方的appraisal系统后几乎可以准确地将浮动值锁定在2个甚至1个可能性左右。功能在网站里的“IV calculator”板块。<br>关于appraisal system，个人觉得官方做的比较实用，因为只要在最高评价（完美度80%以上）基本都不用在意完美度了。至于如何使用appraisal system可以看下表：<br><img src = 'appraisal.png' name = 'pic' alt = 'appraisal' style='width:800px;height:400px;'><h3>属性相克</h3>将在对战技巧中提到");
 }
 
 function tgb(){
@@ -187,15 +187,15 @@ $('#introTwo').html("<h3>金币规划</h3>这款游戏对城市玩家相对较�
 <body>
 <header id="header">
     <div class="container yue">
-      <a id="brand" href="/">
+      <a id="brand" href="/chn.html">
 	<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<svg width="24px" height="24px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	        <path d="M156.613464,113.999999 L235.90968,113.999965 C233.495105,53.9540791 182.972141,6 121,6 C57.4872506,6 6,56.3679626 6,118.5 C6,180.632037 57.4872506,231 121,231 C182.627716,231 232.933165,183.577472 235.86497,124.000065 L235.864973,124 L156.613465,124 C154.053154,140.407155 139.083693,153 121,153 C101.117748,153 85,137.777682 85,119 C85,100.222318 101.117748,85 121,85 C139.083692,85 154.053154,97.5928448 156.613464,113.999999 Z" id="Oval-1" fill="#623473"></path>
 	</svg>
-	<strong>Guanyu's world</strong>
+	<strong>Guanyu的小屋</strong>
       </a>
       <nav id="nav">
-          <a href="/">中文版</a>
+          <a href="pokeinfo.html">中文版</a>
           <a href="pokeinfoE.html">English</a>
       </nav>
     </div>
@@ -238,7 +238,7 @@ $('#introTwo').html("<h3>金币规划</h3>这款游戏对城市玩家相对较�
 </div>
 
 <br><br><br>
-<a href = "/">返回主页</a>
+<a href = "/chn.html">返回主页</a>
 
 </div>
 </article>
