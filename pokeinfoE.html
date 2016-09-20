@@ -25,14 +25,14 @@ function purePlay(){
 	$('#introTwo').empty();
 	if($('#introduction:contains("have fun")').length > 0){
 		$("#introduction").empty();
-		$('#purePlay').html("I just want to have fun.");
+		$('#purePlay').html("Just want to have fun.");
 	} else{
 		 if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
-			$('#pokeDex').html("I want to collect pokedexes and catch them all!");	
+			$('#pokeDex').html("Collect pokedexes and catch them all!");	
 		} else if($('#eventTable tr > td:contains("gyms")').length > 0){
-			$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
+			$('#takeGym').html("<span style='text-decoration:line-through;'>Dominate Richmond</span> Train pokemons and take gyms.");
 		} else if($('#eventTable tr > td:contains("incense")').length > 0){
-			$('#useItems').html("I want to learn how to use items in their best ways.");
+			$('#useItems').html("Learn how to use items in their best ways.");
 		}
 		
 		$("#eventTable tr").remove();
@@ -49,14 +49,14 @@ function pokeDex(){
 	if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#pokeDex').html("I want to collect pokedexes and catch them all!");
+		$('#pokeDex').html("Collect pokedexes and catch them all!");
 	}else{	
 		if($('#eventTable tr > td:contains("gyms")').length > 0){
-			$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
+			$('#takeGym').html("<span style='text-decoration:line-through;'>Dominate Richmond</span> Train pokemons and take gyms.");
 		} else if($('#introduction:contains("have fun")').length > 0){
-			$('#purePlay').html("I just want to have fun.");
+			$('#purePlay').html("Just want to have fun.");
 		} else if($('#eventTable tr > td:contains("incense")').length > 0){
-			$('#useItems').html("I want to learn how to use items in their best ways.");
+			$('#useItems').html("Learn how to use items in their best ways.");
 		}
 		
 		$("#introduction").empty();
@@ -95,14 +95,14 @@ function takeGym(){
 	if($('#eventTable tr > td:contains("gyms")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
+		$('#takeGym').html("<span style='text-decoration:line-through;'>Dominate Richmond</span> Train pokemons and take gyms.");
 	}else{	
 		if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
-			$('#pokeDex').html("I want to collect pokedexes and catch them all!");
+			$('#pokeDex').html("Collect pokedexes and catch them all!");
 		} else if($('#introduction:contains("have fun")').length > 0){
-			$('#purePlay').html("I just want to have fun.");
+			$('#purePlay').html("Just want to have fun.");
 		} else if($('#eventTable tr > td:contains("incense")').length > 0){
-			$('#useItems').html("I want to learn how to use items in their best ways.");
+			$('#useItems').html("Learn how to use items in their best ways.");
 		}
 		
 		$("#introduction").empty();
@@ -142,14 +142,14 @@ function useItems(){
 	if($('#eventTable tr > td:contains("incense")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#useItems').html("I want to learn how to use items in their best ways.");
+		$('#useItems').html("Learn how to use items in their best ways.");
 	}else{	
 		if($('#eventTable tr > td:contains("How to catch a pokemon more easily")').length > 0){
-			$('#pokeDex').html("I want to collect pokedexes and catch them all!");
+			$('#pokeDex').html("Collect pokedexes and catch them all!");
 		} else if($('#introduction:contains("have fun")').length > 0){
-			$('#purePlay').html("I just want to have fun.");
+			$('#purePlay').html("Just want to have fun.");
 		} else if($('#eventTable tr > td:contains("gyms")').length > 0){
-			$('#takeGym').html("I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.");
+			$('#takeGym').html("<span style='text-decoration:line-through;'>Dominate Richmond</span> Train pokemons and take gyms.");
 		}
 		
 		$("#introduction").empty();
@@ -213,16 +213,16 @@ $('#introTwo').html("<h3>Use your pokecoins correctly</h3>This game is quite fri
 
 <table id = "questions" style="width:100%">
   <tr>
-    <td><button input id="purePlay" type="button" onclick="purePlay()">I just want to have fun.</button></td>
+    <td><button input id="purePlay" type="button" onclick="purePlay()">Just want to have fun.</button></td>
   </tr>
   <tr>
-    <td><button input id="pokeDex" type="button" onclick="pokeDex()">I want to collect pokedexes and catch them all!</button></td>
+    <td><button input id="pokeDex" type="button" onclick="pokeDex()">Collect pokedexes and catch them all!</button></td>
   </tr>
   <tr>
-    <td><button input id="takeGym" type="button" onclick="takeGym()">I want to<span style='text-decoration:line-through;'> dominate Richmond </span>train pokemons and take gyms.</button></td>
+    <td><button input id="takeGym" type="button" onclick="takeGym()"><span style='text-decoration:line-through;'>Dominate Richmond</span> Train pokemons and take gyms.</button></td>
   </tr>
   <tr>
-    <td><button input id="useItems" type="button" onclick="useItems()">I want to learn how to use items in their best ways.</button></td>
+    <td><button input id="useItems" type="button" onclick="useItems()">Learn how to use items in their best ways.</button></td>
   </tr>
 </table>
 

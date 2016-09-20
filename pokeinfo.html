@@ -25,14 +25,14 @@ function purePlay(){
 	$('#introTwo').empty();
 	if($('#introduction:contains("休闲玩家")').length > 0){
 		$("#introduction").empty();
-		$('#purePlay').html("我是纯休闲玩家，没太多想法。");
+		$('#purePlay').html("纯休闲玩家，没什么想法。");
 	} else{
 		 if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
-			$('#pokeDex').html("我想尽量收集更多的图鉴。");	
+			$('#pokeDex').html("收集更多的图鉴。");	
 		} else if($('#eventTable tr > td:contains("对战")').length > 0){
-			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
+			$('#takeGym').html("<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
 		} else if($('#eventTable tr > td:contains("熏香")').length > 0){
-			$('#useItems').html("我想了解如何合适地使用道具。");
+			$('#useItems').html("了解如何合适地使用道具。");
 		}
 		
 		$("#eventTable tr").remove();
@@ -49,20 +49,20 @@ function pokeDex(){
 	if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#pokeDex').html("我想尽量收集更多的图鉴。");
+		$('#pokeDex').html("收集更多的图鉴。");
 	}else{	
 		if($('#eventTable tr > td:contains("对战")').length > 0){
-			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
+			$('#takeGym').html("<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
 		} else if($('#introduction:contains("休闲玩家")').length > 0){
-			$('#purePlay').html("我是纯休闲玩家，没太多想法。");
+			$('#purePlay').html("纯休闲玩家，没什么想法。");
 		} else if($('#eventTable tr > td:contains("熏香")').length > 0){
-			$('#useItems').html("我想了解如何合适地使用道具。");
+			$('#useItems').html("了解如何合适地使用道具。");
 		}
 		
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
 		
-		$('#introduction').append("<h3>收集图鉴</h3>如对节电模式有不了解请至休闲玩家板块<br>Pokmon Go目前包括1代的151种pokemon,但由于目前并没有任何方法抓到超梦，萌幻，3神鸟及百变怪这6只pokemon，对于玩家来说只有145个可能集齐的图鉴。");
+		$('#introduction').append("<h3>收集图鉴</h3>如对节电模式有不了解请至休闲玩家板块<br>Pokmon Go目前包括1代的151种pokemon,但由于目前并没有任何方法抓到超梦，梦幻，3神鸟及百变怪这6只pokemon，对于玩家来说只有145个可能集齐的图鉴。");
 
 		$('#eventTable > tbody').append("<tr><td><button input id='pda' type='button' onclick='pda()'>1.如何更容易地抓到一只pokemon？</button></td></tr><tr><td><button input id='pdb' type='button' onclick='pdb()'>2.获得pokemon：抓获/进化/孵蛋/地区特有精灵</button></td></tr><tr><td><button input id='pdc' type='button' onclick='pdc()'>3.等级对获得图鉴（抓获精灵）的利弊</button></td></tr><tr><td><button input id='pdd' type='button' onclick='pdd()'>4.孵蛋列表一览：你想要哪种精灵蛋？</button></td></tr><tr><td><button input id='pde' type='button' onclick='pde()'>5.伊布进化彩蛋 Eeveelutions</button></td></tr>");
 		
@@ -95,14 +95,14 @@ function takeGym(){
 	if($('#eventTable tr > td:contains("对战")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
+		$('#takeGym').html("<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
 	}else{	
 		if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
-			$('#pokeDex').html("我想尽量收集更多的图鉴。");
+			$('#pokeDex').html("收集更多的图鉴。");
 		} else if($('#introduction:contains("休闲玩家")').length > 0){
-			$('#purePlay').html("我是纯休闲玩家，没太多想法。");
+			$('#purePlay').html("纯休闲玩家，没什么想法。");
 		} else if($('#eventTable tr > td:contains("熏香")').length > 0){
-			$('#useItems').html("我想了解如何合适地使用道具。");
+			$('#useItems').html("了解如何合适地使用道具。");
 		}
 		
 		$("#introduction").empty();
@@ -125,7 +125,7 @@ $('#introTwo').html("关于pokemon的等级在pokemon个体战力中已经提到
 }
 
 function tgc(){
-$('#introTwo').html("<h3>实战技巧</h3>作为防御方是电脑操控所以几乎没有技巧可言。因为不提倡拼命防守道馆所以建议可以随便放些卖萌的pokemon，除非想连续占领n个道馆，可以在前n-1个中放一些主力，来降低被打下的可能。<br>进攻则有若干技巧：首先quick move只需要频繁点击就可以，攻击会在左上蓄力槽获得energy，根据main move不同可能是一个或多个技能的蓄力槽，只要一个满了就可以通过按住屏幕来使用main move。通常，伤害很高的main move只有一个100的蓄力槽，伤害一般的技能可能有2个50的蓄力槽，3个33的蓄力槽等。<br>注意：在（尤其是缓慢的）攻击动作中长按很可能导致想使用main move时quick move动作还没有结束而没有成功使用main move，导致浪费时间（伤害），所以需要稍微注意在攻击的间隔中长按屏幕。<br><h3>属性相克</h3>在Pokemon Go中，强属性会获得25%增伤，被克制属性则会获得20%减伤。具体的属性相克表懒得叙述了，但上面提过的网站提供了这个功能。<a href = 'https://pokemon.gameinfo.io/'>网站链接点我</a><br>使用方法：点开Move板块，鼠标放在任意系上，可看到此属性对哪些系增伤，哪些系减伤。点开Pokemon板块，鼠标放在任意系上，可看到此系精灵被哪些系技能打到会减伤，被哪些系技能打到会增伤。<br><h3>躲避（dodge）</h3>这是道馆战最重要的技巧，因为成功的dodge只承受25%伤害，对于高伤害技能效果尤为显著。当然，因为dodge也要花费一些时间，所以不能完全代表对方的实力变为25%。不同的技能都有不同的躲避时机，游戏中显示为屏幕周围闪烁的一瞬间。熟练后躲避技能是一件很简单的事，也可以很轻松摸索出对战有些pokemon时自己应攻击几次然后准备躲它的一次攻击。水伊布是练习dodge的很合适的pokemon，因为水枪技能只有0.5秒，你会很容易在任何时候停下来准备躲对方的攻击，水伊布在对战快龙时甚至可以做到每攻击4次后躲开快龙的一次攻击，这也是水伊布无赖的原因之一。<br>值得注意的是，Blizzard是唯一没有躲避时间的技能，换句话说就是必中，因此有Blizzard的乘龙，白海狮，铁甲贝等pokemon有时是很可怕的存在。<br><h3>最后的小技巧</h3>防御方的任何quick move发动时间都会变慢1-2秒，导致即使对方是水枪这种快速技能，你也可能做到攻击1-2次还躲开对方的技能。但要注意的是防御方在对战开始都会连续无时间间隔地使用两次quick move，所以一开始不攻击而是认真躲开对方的2连击是一个不错的选择。");
+$('#introTwo').html("<h3>实战技巧</h3>作为防御方是电脑操控所以几乎没有技巧可言。因为不提倡拼命防守道馆所以建议可以随便放些卖萌的pokemon，除非想连续占领n个道馆，可以在前n-1个中放一些主力，来降低被打下的可能。<br>进攻则有若干技巧：首先quick move只需要频繁点击就可以，攻击会在左上蓄力槽获得energy，根据main move不同可能是一个或多个技能的蓄力槽，只要一个满了就可以通过按住屏幕来使用main move。通常，伤害很高的main move只有一个100的蓄力槽，伤害一般的技能可能有2个50的蓄力槽，3个33的蓄力槽等。<br>注意：在（尤其是缓慢的）攻击动作中长按很可能导致想使用main move时quick move动作还没有结束而没有成功使用main move，进而浪费时间（伤害），所以需要稍微注意在攻击的间隔中长按屏幕。<br><h3>属性相克</h3>在Pokemon Go中，强属性会获得25%增伤，被克制属性则会获得20%减伤。具体的属性相克表懒得叙述了，但上面提过的网站提供了这个功能。<a href = 'https://pokemon.gameinfo.io/'>网站链接点我</a><br>使用方法：点开Move板块，鼠标放在任意系上，可看到此属性对哪些系增伤，哪些系减伤。点开Pokemon板块，鼠标放在任意系上，可看到此系精灵被哪些系技能打到会减伤，被哪些系技能打到会增伤。<br><h3>躲避（dodge）</h3>这是道馆战最重要的技巧，因为成功的dodge只承受25%伤害，对于高伤害技能效果尤为显著。当然，因为dodge也要花费一些时间，所以不能完全代表对方的实力变为25%。不同的技能都有不同的躲避时机，游戏中显示为屏幕周围闪烁的一瞬间。熟练后躲避技能是一件很简单的事，也可以很轻松摸索出对战有些pokemon时自己应攻击几次然后准备躲它的一次攻击。水伊布是练习dodge的很合适的pokemon，因为水枪技能只有0.5秒，你会很容易在任何时候停下来准备躲对方的攻击，水伊布在对战快龙时甚至可以做到每攻击4次后躲开快龙的一次攻击，这也是水伊布无赖的原因之一。<br>值得注意的是，Blizzard是唯一没有躲避时间的技能，换句话说就是必中，因此有Blizzard的乘龙，白海狮，铁甲贝等pokemon有时是很可怕的存在。<br><h3>最后的小技巧</h3>防御方的任何quick move发动时间都会变慢1-2秒，导致即使对方是水枪这种快速技能，你也可能做到攻击1-2次还躲开对方的技能。但要注意的是防御方在对战开始都会连续无时间间隔地使用两次quick move，所以一开始不攻击而是认真躲开对方的2连击是一个不错的选择。");
 }
 
 function tgd(){
@@ -142,20 +142,20 @@ function useItems(){
 	if($('#eventTable tr > td:contains("熏香")').length > 0){
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
-		$('#useItems').html("我想了解如何合适地使用道具。");
+		$('#useItems').html("了解如何合适地使用道具。");
 	}else{	
 		if($('#eventTable tr > td:contains("如何更容易地抓")').length > 0){
-			$('#pokeDex').html("我想尽量收集更多的图鉴。");
+			$('#pokeDex').html("收集更多的图鉴。");
 		} else if($('#introduction:contains("休闲玩家")').length > 0){
-			$('#purePlay').html("我是纯休闲玩家，没太多想法。");
+			$('#purePlay').html("纯休闲玩家，没什么想法。");
 		} else if($('#eventTable tr > td:contains("对战")').length > 0){
-			$('#takeGym').html("我想要<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
+			$('#takeGym').html("<span style='text-decoration:line-through;'>称霸里士满</span>培养强力的精灵和占领道馆。");
 		}
 		
 		$("#introduction").empty();
 		$("#eventTable tr").remove();
 
-		$('#eventTable > tbody').append("<tr><td><button input id='uia' type='button' onclick='uia()'>1.合理使用孵蛋器</button></td></tr><tr><td><button input id='uib' type='button' onclick='uib()'>2.合理使用Lucky Egg（升级利器）</button></td></tr><tr><td><button input id='uic' type='button' onclick='uic()'>3.合理使用熏香</button></td></tr><tr><td><button input id='uid' type='button' onclick='uid()'>4.简述Lure Module</button></td></tr><tr><td><button input id='uie' type='button' onclick='uie()'>5.pokemon金币规划</button></td></tr>");
+		$('#eventTable > tbody').append("<tr><td><button input id='uia' type='button' onclick='uia()'>1.合理使用孵蛋器</button></td></tr><tr><td><button input id='uib' type='button' onclick='uib()'>2.合理使用Lucky Egg（快速升级）</button></td></tr><tr><td><button input id='uic' type='button' onclick='uic()'>3.合理使用熏香</button></td></tr><tr><td><button input id='uid' type='button' onclick='uid()'>4.简述Lure Module</button></td></tr><tr><td><button input id='uie' type='button' onclick='uie()'>5.pokemon金币规划</button></td></tr>");
 		$('#useItems').html("隐藏2级菜单");
 	}
 }
@@ -165,7 +165,7 @@ $('#introTwo').html("<h3>孵蛋器的重要性及用法</h3>之前的板块提�
 }
 
 function uib(){
-$('#introTwo').html("<h3>合理使用Lucky egg</h3>升级最需要的不是抓到新pokemon的500xp奖励，不是孵出10km蛋的1000xp，更不是一堆扔出excellent的100xp奖励，而是一口气进化好几十只波波的500*60这种程度的xp获取。<br>此处波波可以是毛虫，角虫，或者25颗糖的小拉达，但共同点是多，且没有用，也可以是其他任何你有足够糖，但没有进化的pokemon。每只波波进化需要12颗糖，但进化成功后会还给你1颗，transfer掉进化的之后会得到1颗，所以只需要10颗糖。每抓到3只波波，transfer掉2只，就可以进化一只。<h3>具体方法</h3>但这里要说的不仅是抓波波，而是合理使用Lucky egg。方法自然就是：在你有一些蛋要孵好的时候，打开一颗Lucky egg，然后把你积攒的数十只波波用数百颗糖进化成比比鸟，然后transfer掉比比鸟得到糖继续进化其他的波波。波波指的是所有你可以进化的pokemon。<br>关于最大的收益，普遍认为靠这种方法30分钟可以进化60只pokemon，也就是30000+30000lucky egg = 60000经验。但很多人开始在进化动画刚开始时关闭重启游戏以此跳过进化动画，最后可以进化80甚至更多的pokemon。关于能进化多少其实完全没有必要强求，不过也有人半小时进化了111只，大概只是想创个记录吧。<h3>2个重点</h3>平时多抓只需要12颗糖就能进化的pokemon，以及如果有Lucky egg的话让所有的pokemon都等着在使用Lucky egg的时候再进化。");
+$('#introTwo').html("<h3>合理使用Lucky egg</h3>升级最需要的不是抓到新pokemon的500xp奖励，不是孵出10km蛋的1000xp，更不是一堆扔出excellent的100xp奖励，而是一口气进化好几十只波波的500*60这种程度的xp获取。<br>此处波波可以是毛虫，角虫，或者25颗糖的小拉达，但共同点是多，且没有用，也可以是其他任何你有足够糖，但没有进化的pokemon。每只波波进化需要12颗糖，但进化成功后会还给你1颗，transfer掉进化的之后会得到1颗，所以只需要10颗糖。每抓到3只波波，transfer掉2只，就可以进化一只。<h3>具体方法</h3>但这里要说的不仅是抓波波，而是合理使用Lucky egg。方法自然就是：在你有一些蛋要孵好的时候，打开一颗Lucky egg，然后把你积攒的数十只波波用数百颗糖进化成比比鸟，然后transfer掉比比鸟得到糖继续进化其他的波波。波波指的是所有你可以进化的pokemon。<br>关于最大的收益，普遍认为靠这种方法30分钟可以进化60只pokemon，也就是30000+30000lucky egg = 60000经验。但很多人开始在进化动画刚开始时关闭重启游戏以此跳过进化动画，最后可以进化80甚至更多的pokemon。关于能进化多少其实完全没有必要强求，不过也有人拼了老命半小时进化了111只还有140多只的。。<h3>2个重点</h3>平时多抓只需要12颗糖就能进化的pokemon，以及如果有Lucky egg的话让所有的pokemon都等着在使用Lucky egg的时候再进化。");
 }
 
 function uic(){
@@ -209,20 +209,20 @@ $('#introTwo').html("<h3>金币规划</h3>这款游戏对城市玩家相对较�
 
 <article id="main" role="main" class="hentry yue" itemscope itemtype="http://schema.org/Article">
 <div class="entry-content container" itemprop="articleBody">
-<h2>我想要怎样去玩Pokemon GO?</h2>
+<h2>想要怎样去玩Pokemon GO?</h2>
 
 <table id = "questions" style="width:100%">
   <tr>
-    <td><button input id="purePlay" type="button" onclick="purePlay()">我是纯休闲玩家，没太多想法。</button></td>
+    <td><button input id="purePlay" type="button" onclick="purePlay()">纯休闲玩家，没什么想法。</button></td>
   </tr>
   <tr>
-    <td><button input id="pokeDex" type="button" onclick="pokeDex()">我想尽量收集更多的图鉴。</button></td>
+    <td><button input id="pokeDex" type="button" onclick="pokeDex()">收集更多的图鉴。</button></td>
   </tr>
   <tr>
-    <td><button input id="takeGym" type="button" onclick="takeGym()">我想要<span style="text-decoration:line-through;">称霸里士满</span>培养强力的精灵和占领道馆。</button></td>
+    <td><button input id="takeGym" type="button" onclick="takeGym()"><span style="text-decoration:line-through;">称霸里士满</span>培养强力的精灵和占领道馆。</button></td>
   </tr>
   <tr>
-    <td><button input id="useItems" type="button" onclick="useItems()">我想了解如何合适地使用道具。</button></td>
+    <td><button input id="useItems" type="button" onclick="useItems()">了解如何合适地使用道具。</button></td>
   </tr>
 </table>
 
